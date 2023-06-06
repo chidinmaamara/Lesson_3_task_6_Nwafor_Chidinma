@@ -88,11 +88,13 @@ main{
 	height: 400px;
 	width: 400px;
 	border-radius: 40px;
+	display: none;
 }
 .child{
 	height: 400px;
 	width: 400px;
 	border-radius: 40px;
+	display: none;
 }section{
 	flex:5;
 	padding: 20px;
@@ -110,17 +112,41 @@ footer{
 	align-items: center;
 	color: white;
 }
-@media  screen and ( max-width:600px) {
+@media  screen and ( width >=600px) {
 		main{
 			flex-direction: column;
 		}
 		header{
 			flex-direction: column;
 		}
-		img{
+		header.img{
 			display: none;
 		}
+		.img{
+			display: block;
+		}
+		.child{
+			display: block;
+		}
 	}
+	@media  screen and ( width >=900px) {
+		main{
+			flex-direction: row;
+		}
+		header{
+			flex-direction: column;
+		}
+		header.img{
+			display: none;
+		}
+		.img{
+			display: block;
+		}
+		.child{
+			display: block;
+		}
+	}
+
 
 
 
